@@ -13,14 +13,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 15px;
     color: aliceblue;
-    background-color: rgb(71, 71, 255);
-    height: 55px;
+    background-color: #0061fe;
+    height: 50px;
 }
 
 /* HEADER */
-
+.logo-logo{
+    padding: 10px 0;
+    margin-left: 20px;
+}
 .head{
     display: flex;
     justify-content: space-around;
@@ -155,8 +158,20 @@ ul.dropdown-menu {
     .links, .one{
         display: none;
     }
+    .logo-logo{
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    .dropdown button{
+        margin-left: 20px;
+    }
 }
+@media (max-width: 500px){
 
+.head-buttons button{
+    font-size: 12px !important;
+   }
+}
 /* VIDEO BACKGROUND */
 .video--background {
     position: relative;
@@ -183,14 +198,19 @@ ul.dropdown-menu {
 
 .overlay-text h1{
     font-size: 55px;
-    font-weight: 400;
+    font-weight: 600;
+    font-style: italic;
+
     font-family: "Kanit", sans-serif !important;
+}
+.highlight-ot{
+    color: #0062ff;
 }
 .overlay-text p{
     font-family: "Kanit", sans-serif !important;
     padding-top: px;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 30px;
 }
 .one-video button{
     width: 400px;
@@ -210,5 +230,163 @@ ul.dropdown-menu {
 @media(max-width: 400px){
     .head-buttons, .button-5{
       font-size: 14px;
+    }
+}
+
+/*ABOUT ME */
+.two-about{
+    display: flex;
+    padding: 40px;
+    background-color: rgb(236, 236, 236);
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.two-words{
+    width: 600px;
+}
+.two-words h1{
+    font-size: 50px;
+    color: #004bc3;
+}
+.two-about button{
+ background-color: #0050d1;
+}
+.two-about button:hover{
+    background-color: #4d91ff;
+}
+.two-about p{
+    font-size: 20px;
+    font-weight: 300 ;
+}
+.two-pic{
+    width: 370px;
+}
+@media (max-width: 700px) {
+    .two-words{
+        padding-bottom: 50px;
+
+    }
+    .two-words h1{
+        font-size: 40px;
+        color: #004bc3;
+    }
+    .two-about p{
+        font-size: 18px;
+    }
+    .two-words{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .two-pic{
+        width: 300px;
+    }
+    .two-about button{
+        width: 300px;
+       }
+       .head-buttons button{
+        font-size: 15px;
+
+       }
+
+}
+
+/* SERVICES */
+
+.three-services{
+    display: flex;
+    flex-direction: column;
+}
+
+.three-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #295fff;
+    height: 120px;
+}
+.three-head h1{
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+}
+.three-head-2 p{
+    font-size: 35px;
+    font-style: italic;
+    color: #0058e6;
+}
+
+.three-head-2{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+    font-style: ;
+    background-color: rgba(228, 228, 228, 0.508);
+
+}
+
+
+.three-containers{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: rgba(228, 228, 228, 0.508);
+    padding: 40px;
+    gap: 15px;
+}
+
+.box-3{
+    display: flex;
+    border-radius: 9px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 350px;
+    
+    background-color: #ffffff;
+        box-shadow: 5px 5px 10px 3px #43434336;
+      
+
+}
+.box-3 img{
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    border-top-left-radius: 9.0px;  
+  border-top-right-radius: 9.0px;
+}
+.box-3 h1{
+    padding: 10px;
+    font-weight: 600;
+}
+.box-3 p{
+    padding: 10px;
+    font-weight: 300;
+    font-size: 17px;
+}
+.three-buttons{
+    width: 200px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+.three-buttons:hover{
+    background-color: black !important;
+    color: white;
+}
+@media(max-width: 600px) {
+    .three-containers{
+        gap: 30px;
+    }
+
+    .box-3{
+        width: 320px;
     }
 }
