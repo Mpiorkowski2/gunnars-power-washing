@@ -12,6 +12,4 @@ function showThankYouMessage(event) {
     // The form will automatically be submitted to the Google Sheets backend
   }
   
-
-  
-
+ 

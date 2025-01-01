@@ -20,6 +20,7 @@ body {
 }
 
 /* HEADER */
+
 .logo-logo{
     padding: 10px 0;
     margin-left: 20px;
@@ -29,6 +30,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 5px 0;
+    height: 120px;
 }
 .links, .one{
     display: flex;
@@ -279,7 +281,7 @@ ul.dropdown-menu {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        
     }
     .two-pic{
         width: 300px;
@@ -388,5 +390,187 @@ ul.dropdown-menu {
 
     .box-3{
         width: 320px;
+    }
+}
+
+
+/* TESTIMONIALS */
+  .four-carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5294ff;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .four-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 190px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .four-test h1 {
+    font-size: 40px;
+    color: white;
+    padding: 5px
+  }
+  
+  .four-test p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    
+  }
+  
+  .carousel_items {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .carousel_item {
+    
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 3px #43434378;
+    background: white;
+    margin: 10px;
+  }
+  
+  .carousel_item p {
+    width: 400px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .carousel_item .fa {
+    color: rgb(255, 215, 56);
+    font-size: 23px;
+  }
+
+  .review-button{
+    margin-top: 20px;
+    width: 370px;
+    font-size: 25px;
+    padding: 0px ;
+    background-color: #888c93;
+  }
+  .review-button:hover{
+    background-color: #b0b6bf;
+  }
+
+  @media (max-width:600px) {
+   .carousel_items p{
+    width: 300px;
+   }
+
+   .four-test{
+    margin-bottom: 40px;
+   }
+    
+  }
+ 
+/*OUR PROCESS */
+
+.five-why{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+
+}
+
+.five-head{
+    display: flex;
+justify-content: center;
+margin-bottom: 30px;
+font-size: 25px;
+color: #000000;
+}
+
+.five-boxes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.five-box{
+width: 300px;
+display: flex;
+flex-direction: column;
+background-color: #ffffff;
+padding: 18px;
+align-items: center;
+border-radius: 14px;
+box-shadow: 5px 5px 10px 3px #e0e0e0;
+}
+.five-box h1{
+    font-size: 27px;
+    font-weight: 800;
+}
+.five-box p{
+    text-align: center;
+}
+
+.five-svg{
+    width: 40px;
+    fill: #2a69ce;
+}
+
+/* EMAIL NEWS LETTER*/
+.six-news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0062ff;
+    height: 300px;
+}
+.six-news h1{
+    font-size: 60px;
+    text-align: center;
+    color:  rgb(255, 255, 255);
+
+}
+.six-news input{
+width: 400px;
+height: 40px;
+border-radius: 8px;
+border: 2px solid white;
+}
+.six-news input:active{
+}
+.six-button{
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+.six-button:hover{
+    color: black;
+    background-color: white;
+}
+
+@media (max-width: 650px) {
+    .six-button{
+        width: 120px;
+    }
+    .six-news input{
+        width: 220px;
+    }
+    .six-news h1{
+        font-size: 45px;
     }
 }
