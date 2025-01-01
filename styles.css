@@ -47,6 +47,10 @@ ul.links.one {
     list-style-type: none; /* Removes the bullets */
 
 }
+.links one{
+    list-style-type: none; /* Removes the bullets */
+
+}
 .links li a{
     text-decoration: none;
 }
@@ -157,7 +161,7 @@ ul.dropdown-menu {
     .dropdown{
         display: block;
     }
-    .links, .one{
+    header .links.one{
         display: none;
     }
     .logo-logo{
@@ -496,6 +500,7 @@ ul.dropdown-menu {
 justify-content: center;
 margin-bottom: 30px;
 font-size: 25px;
+text-align: center;
 color: #000000;
 }
 
@@ -572,5 +577,95 @@ border: 2px solid white;
     }
     .six-news h1{
         font-size: 45px;
+    }
+}
+
+/* FOOTER */ 
+
+footer{
+    
+    background-color: white;
+}
+.footer-boxes{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 60px;
+    flex-wrap: wrap;
+}
+
+.right-foot{
+    display: flex;
+    flex-direction: column;
+}
+footer ul{
+display: flex;
+flex-direction: column;
+}
+
+.left-foot{
+justify-content: center;
+display: flex;
+align-items: center;
+}
+
+.touch{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.touch a{
+    text-decoration: none;
+}
+.touch svg{
+    width: 60px;
+    font-size: 90px;
+    padding: 8px;
+}
+.touch svg:hover{
+    background-color: rgba(184, 184, 184, 0.27);
+    padding: 4px;
+    height: 68px;
+    width: 68px;
+    transition: .3s;
+    border-radius: 6px;
+}
+.svg-ig svg:hover{
+    height: 58px ;
+    width: 58px;
+    padding: 4px;
+    transition: .3s;
+    border-radius: 6px;
+}
+.touch .svg-ig svg{
+    width: 60px;
+    font-size: 90px;
+    padding: 8px;
+}
+.two-foot{
+    padding: 0;
+}
+
+.foot-bottom{
+    display: flex;
+    margin: 0px 50px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid black;
+}
+.foot-bottom img{
+    padding: 10px;
+}
+.cop{
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .footer-boxes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
     }
 }
