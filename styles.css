@@ -172,12 +172,27 @@ ul.dropdown-menu {
         margin-left: 20px;
     }
 }
-@media (max-width: 500px){
 
-.head-buttons button{
-    font-size: 12px !important;
+
+@media (max-width: 500px){
+ 
+    .head-buttons button{
+        font-size: 12px !important;
+        font-weight:700 !important;
+        
+       }
    }
-}
+   
+   @media (max-width: 400px){
+    
+       .head-buttons button{
+           font-size: 10px !important;
+           font-weight:700 !important;
+           width: 69px;
+   
+          }
+       }
+   
 /* VIDEO BACKGROUND */
 .video--background {
     position: relative;
@@ -238,6 +253,15 @@ ul.dropdown-menu {
       font-size: 14px;
     }
 }
+@media (max-width: 400px){
+ 
+    .head-buttons button{
+        font-size: 10px !important;
+        font-weight:700 !important;
+        width: 69px;
+
+       }
+    }
 
 /*ABOUT ME */
 .two-about{
@@ -658,6 +682,12 @@ align-items: center;
 }
 .cop{
     font-size: 20px;
+}
+
+#thank-you-message{
+    color: white;
+    font-size: 23px;
+    font-style: italic;
 }
 
 @media (max-width: 800px) {
