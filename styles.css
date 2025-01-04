@@ -1,4 +1,9 @@
-*{  
+
+
+
+*
+
+{  
    font-family: 'Inter', sans-serif;
 
 }
@@ -84,34 +89,11 @@ ul.links.one li a:hover::after {
 }
 
 
-.dropdown-menu{
-    background-color: #d9d9d9;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    display: none;
-}
-.dropdown-menu li{
-width: 100%;
-
-}
-ul.dropdown-menu {
-    list-style-type: none; /* Removes the bullets */
-
-}
-.dropdown-item:hover{
-    background-color: gray;
-}
-.dropdown-item{
-    text-decoration: none !important;
-    color: #000; /* Optional: Set text color */
-    display: block; /* Ensure the entire area is clickable */
-}
 
 .button-5 {
   align-items: center;
   background-clip: padding-box;
-  background-color: rgb(71, 71, 255);
+  background-color: #1e74ff ;
   border: 1px solid transparent;
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -139,8 +121,8 @@ ul.dropdown-menu {
 
 .button-5:hover,
 .button-5:focus {
-  background-color: rgb(107, 107, 255);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    background-color: #5496ff ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   color: #ffffff;
 }
 
@@ -149,17 +131,15 @@ ul.dropdown-menu {
 }
 
 .button-5:active {
-  background-color: rgb(107, 107, 255);
+    background-color: #5496ff ;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
 }
 
-.dropdown{
-    display: none;
-}
+
 @media (max-width: 1100px){
     .dropdown{
-        display: block;
+        display: block !important;
     }
     header .links.one{
         display: none;
@@ -193,6 +173,11 @@ ul.dropdown-menu {
           }
        }
    
+
+
+
+
+/** DROP DOWN BUTTON 
 /* VIDEO BACKGROUND */
 .video--background {
     position: relative;
@@ -237,6 +222,23 @@ ul.dropdown-menu {
     width: 400px;
 }
 
+@media (max-width: 1100px){
+    .dropdown{
+        display: block;
+    }
+    header .links.one{
+        display: none;
+    }
+    .logo-logo{
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    .dropdown button{
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
+
 @media(max-width: 500px){
     .one-video button{
         width: 200px;
@@ -246,6 +248,7 @@ ul.dropdown-menu {
     }.toptop-line{
         font-size: 15px;
     }
+  
 }
 
 @media(max-width: 400px){
@@ -419,6 +422,8 @@ ul.dropdown-menu {
     .box-3{
         width: 320px;
     }
+    .three-head-2 p{
+text-align: center;    }
 }
 
 
@@ -427,7 +432,7 @@ ul.dropdown-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #5294ff;
+    background-color: #1e74ff ;
     overflow: hidden;
     position: relative;
     padding-bottom: 20px;
@@ -442,25 +447,24 @@ ul.dropdown-menu {
     margin-bottom: 40px;
   }
   
-  .four-test h1 {
+.four-test h1 {
     font-size: 40px;
     color: white;
     padding: 5px
   }
-  
-  .four-test p {
+.four-test p {
     font-size: 20px;
     color: rgb(255, 255, 255);
     font-style: italic;
-    
   }
   
-  .carousel_items {
+.carousel_items {
     display: flex;
     flex-direction: row;
     height: 100%;
-  }
-  
+    flex-wrap: nowrap;}
+
+
   .carousel_item {
     
     padding: 5px;
@@ -484,6 +488,7 @@ ul.dropdown-menu {
   .carousel_item .fa {
     color: rgb(255, 215, 56);
     font-size: 23px;
+    
   }
 
   .review-button{
@@ -491,10 +496,14 @@ ul.dropdown-menu {
     width: 370px;
     font-size: 25px;
     padding: 0px ;
-    background-color: #888c93;
+    background-color: #989898;
   }
   .review-button:hover{
-    background-color: #b0b6bf;
+    background-color: rgb(163, 163, 163);
+  }
+  .review-button:active,
+  .review-button:focus{
+    background-color: rgb(163, 163, 163);
   }
 
   @media (max-width:600px) {
@@ -564,7 +573,7 @@ box-shadow: 5px 5px 10px 3px #e0e0e0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0062ff;
+    background-color: #1e74ff !important;
     height: 300px;
 }
 .six-news h1{
@@ -583,14 +592,21 @@ border: 2px solid white;
 }
 .six-button{
     width: 200px;
-    background-color: rgb(0, 0, 0);
+    background-color: #313131;
     color: rgb(255, 255, 255);
     border-radius: 8px;
+    font-size: 18px;
+    height: 50px;
 }
 .six-button:hover{
-    color: black;
-    background-color: white;
+    background-color: rgb(163, 163, 163);
 }
+#subscribe-form{
+    align-items: center;
+    display: flex;
+    gap: 3px;
+}
+
 
 @media (max-width: 650px) {
     .six-button{
