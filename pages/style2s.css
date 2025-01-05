@@ -1,23 +1,4 @@
-*{  
-    font-family: 'Inter', sans-serif;
- 
- }
- body {
-     margin: 0;
-     padding: 0;
- }
- 
- /* TOP LINE */
- 
- .toptop-line{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-size: 15px;
-     color: aliceblue;
-     background-color: #0061fe;
-     height: 50px;
- }
+
  .privacy-top, .gallery-line, .about-head, .service-top, .testimonial-head, .contact-head{
     background-color: #0061fe !important;
 
@@ -40,180 +21,312 @@
  
  /* HEADER */
  
- .logo-logo{
-     padding: 10px 0;
-     margin-left: 20px;
- }
- .head{
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     padding: 5px 0;
-     height: 120px;
- }
- .links, .one{
-     display: flex;
-     font-size: 18px;
-     font-weight: 500;
- }
- .links a{
-     color: black;
- }
- .links a:hover{
-     color: gray;
- }
- ul.links.one {
-     list-style-type: none; /* Removes the bullets */
- 
- }
- .links one{
-     list-style-type: none; /* Removes the bullets */
- 
- }
- .links li a{
-     text-decoration: none;
- }
- .links li{
- padding: 0 20px ;
- }
- ul.links.one li a {
-     position: relative;
-     text-decoration: none;
-     color: #000000;
-     transition: color 0.3s ease;
- }
- 
- ul.links.one li a::after {
-     content: "";
-     position: absolute;
-     bottom: -3px;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 0;
-     height: 2px;
-     background-color: #2d2d2d;
-     transition: width 0.3s ease;
- }
- 
- ul.links.one li a:hover::after {
-     width: 100%;
- }
- .head-buttons a{
-     text-decoration: none;
- }
- 
- 
- .dropdown-menu{
-     background-color: #d9d9d9;
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-end;
-     display: none;
- }
- .dropdown-menu li{
- width: 100%;
- 
- }
- ul.dropdown-menu {
-     list-style-type: none; /* Removes the bullets */
- 
- }
- .dropdown-item:hover{
-     background-color: gray;
- }
- .dropdown-item{
-     text-decoration: none !important;
-     color: #000; /* Optional: Set text color */
-     display: block; /* Ensure the entire area is clickable */
- }
- 
- .button-5 {
-    align-items: center;
-    background-clip: padding-box;
-    background-color: #1e74ff ;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+
+
+
+/* off-screen-menu */
+.off-screen-menu {
+    background-color:  rgb(207, 207, 208);
+    height: 100vh;
+    width: 100%;
+    max-width: 330px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    z-index: 9998;
+    flex-direction: column;
+    align-items: center;    
     justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    transition: .5s ease;
+    display: none;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+.off-screen-menu a {
     text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
-  }
-  
-  .button-5:hover,
-  .button-5:focus {
-      background-color: #5496ff ;
-      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-    color: #ffffff;
-  }
-  
-  .button-5:hover {
-    transform: translateY(-1px);
-  }
-  
-  .button-5:active {
-      background-color: #5496ff ;
-    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-    transform: translateY(0);
-  }
-  
- 
- .dropdown{
-     display: none;
- }
-
-
- @media (max-width: 1100px){
-     .dropdown{
-         display: block;
-     }
-     header .links.one{
-         display: none;
-     }
-     .logo-logo{
-         margin-right: auto;
-         margin-left: 20px;
-     }
-     .dropdown button{
-         margin-left: 20px;
-         margin-right: 10px;
-     }
- }
- @media (max-width: 500px){
- 
- .head-buttons button{
-     font-size: 12px !important;
-     font-weight:700 !important;
-     
-    }
+    color: #004bc3;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative; /* Necessary for positioning the pseudo-element */
 }
 
-@media (max-width: 400px){
- 
-    .head-buttons button{
-        font-size: 10px !important;
-        font-weight:700 !important;
-        width: 69px;
+.off-screen-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Distance between the underline and the text */
+    left: 0; /* Start from the left */
+    width: 0; /* Initially hidden */
+    height: 3px; /* Thickness of the underline */
+    background-color: #000000; /* Match the text color */
+    transition: width 0.3s ease; /* Smooth animation */
+}
 
-       }
+.off-screen-menu a:hover::after {
+    width: 100%; /* Expand to the full width of the text */
+    background-color: #000000; /* Change color on hover */
+}
+
+.off-screen-menu li {
+    list-style-type: none; /* Removes the bullets */
+}
+
+
+/* nav */
+nav {
+    display: none;
+    background-color: #0061fe;
+    border-radius: 4px;
+    margin-left: 20px;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+
+}
+
+
+
+/* ham menu */
+.ham-menu {
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+    position: relative;
+    z-index: 9999;
+
+}
+.ham-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 9999;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+*
+
+{  
+   font-family: 'Inter', sans-serif;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* TOP LINE */
+
+.toptop-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: aliceblue;
+    background-color: #0061fe;
+    height: 50px;
+}
+
+/* HEADER */
+
+.logo-logo{
+    padding: 10px 0;
+    margin-left: 20px;
+}
+.head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    height: 120px;
+}
+.links, .one{
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+}
+.links a{
+    color: black;
+}
+.links a:hover{
+    color: gray;
+}
+ul.links.one {
+    list-style-type: none; /* Removes the bullets */
+
+}
+.links one{
+    list-style-type: none; /* Removes the bullets */
+
+}
+.links li a{
+    text-decoration: none;
+}
+.links li{
+padding: 0 20px ;
+}
+ul.links.one li a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+ul.links.one li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #2d2d2d;
+    transition: width 0.3s ease;
+}
+
+ul.links.one li a:hover::after {
+    width: 100%;
+}
+.head-buttons a{
+    text-decoration: none;
+}
+
+
+
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #1e74ff ;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-5:hover,
+.button-5:focus {
+    background-color: #5496ff ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: #ffffff;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+    background-color: #5496ff ;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 1100px){
+    .off-screen-menu{
+        display: flex;
+    }
+ 
+    header .links.one{
+        display: none;
+    }
+    .logo-logo{
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    nav {
+        display: flex !important;
     }
 
+}
+
+
+@media (max-width: 500px){
+ 
+    .head-buttons button{
+        font-size: 12px !important;
+        font-weight:700 !important;
+        
+       }
+   }
+   
+   @media (max-width: 400px){
+    
+       .head-buttons button{
+           font-size: 10px !important;
+           font-weight:700 !important;
+           width: 69px;
+   
+          }
+       }
+   
+
+       @media (max-width: 1100px){
+        .dropdown-button{
+            display: inline-block !important;
+        }
+        header .links.one{
+            display: none;
+        }
+        .dropdown-links{
+            display: flex !important;
+        }
+        .logo-logo{
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        .dropdown button{
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+    }
 
 /*ABOUT ME PAGE */
 

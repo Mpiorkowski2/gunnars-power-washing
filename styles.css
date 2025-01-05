@@ -1,6 +1,142 @@
 
 
 
+/* off-screen-menu */
+.off-screen-menu {
+    background-color:  rgb(207, 207, 208);
+    height: 100vh;
+    width: 100%;
+    max-width: 330px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    z-index: 9998;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .5s ease;
+    display: none;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+.off-screen-menu a {
+    text-decoration: none;
+    color: #004bc3;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative; /* Necessary for positioning the pseudo-element */
+}
+
+.off-screen-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Distance between the underline and the text */
+    left: 0; /* Start from the left */
+    width: 0; /* Initially hidden */
+    height: 3px; /* Thickness of the underline */
+    background-color: #000000; /* Match the text color */
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+.off-screen-menu a:hover::after {
+    width: 100%; /* Expand to the full width of the text */
+    background-color: #000000; /* Change color on hover */
+}
+
+.off-screen-menu li {
+    list-style-type: none; /* Removes the bullets */
+}
+.off-screen-menu .touch{
+    margin: 0;
+    padding: 0;
+}
+.off-screen-menu .touch a:hover{
+    
+}
+
+
+.off-screen-menu svg{
+    width: 60px;
+    font-size: 90px;
+}
+.off-screen-menu .touch svg:hover{
+   
+    height: 60px;
+    width: 60px;
+    transition: .3s;
+}
+.svg-ig svg:hover{
+    height: 54px ;
+    width: 54px;
+    
+}
+.touch .svg-ig svg{
+    width: 54px;
+    font-size: 90px;
+}
+
+/* nav */
+nav {
+    display: none;
+    background-color: #0061fe;
+    border-radius: 4px;
+    margin-left: 20px;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+
+}
+
+
+
+/* ham menu */
+.ham-menu {
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+    position: relative;
+    z-index: 9999;
+
+}
+.ham-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 9999;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
 *
 
 {  
@@ -138,9 +274,10 @@ ul.links.one li a:hover::after {
 
 
 @media (max-width: 1100px){
-    .dropdown{
-        display: block !important;
+    .off-screen-menu{
+        display: flex;
     }
+ 
     header .links.one{
         display: none;
     }
@@ -148,9 +285,10 @@ ul.links.one li a:hover::after {
         margin-right: auto;
         margin-left: 20px;
     }
-    .dropdown button{
-        margin-left: 20px;
+    nav {
+        display: flex !important;
     }
+
 }
 
 
@@ -174,10 +312,26 @@ ul.links.one li a:hover::after {
        }
    
 
+       @media (max-width: 1100px){
+        .dropdown-button{
+            display: inline-block !important;
+        }
+        header .links.one{
+            display: none;
+        }
+        .dropdown-links{
+            display: flex !important;
+        }
+        .logo-logo{
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        .dropdown button{
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+    }
 
-
-
-/** DROP DOWN BUTTON 
 /* VIDEO BACKGROUND */
 .video--background {
     position: relative;
@@ -222,22 +376,7 @@ ul.links.one li a:hover::after {
     width: 400px;
 }
 
-@media (max-width: 1100px){
-    .dropdown{
-        display: block;
-    }
-    header .links.one{
-        display: none;
-    }
-    .logo-logo{
-        margin-right: auto;
-        margin-left: 20px;
-    }
-    .dropdown button{
-        margin-left: 20px;
-        margin-right: 10px;
-    }
-}
+
 
 @media(max-width: 500px){
     .one-video button{
@@ -574,7 +713,9 @@ box-shadow: 5px 5px 10px 3px #e0e0e0;
     justify-content: center;
     align-items: center;
     background-color: #1e74ff !important;
-    height: 300px;
+    height: auto;
+    padding-bottom: 20px;
+
 }
 .six-news h1{
     font-size: 60px;
@@ -582,6 +723,12 @@ box-shadow: 5px 5px 10px 3px #e0e0e0;
     color:  rgb(255, 255, 255);
 
 }
+.six-news p{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-style: italic;
+max-width: 900px;}
 .six-news input{
 width: 400px;
 height: 40px;
@@ -617,6 +764,15 @@ border: 2px solid white;
     }
     .six-news h1{
         font-size: 45px;
+    }
+    .six-news p{
+        width: auto;
+        font-size: 19px;
+        padding: 4px;
+    }
+    .six-news{
+        height: 400px;
+        padding-bottom: 20px;
     }
 }
 

@@ -14,13 +14,14 @@
 
 <body>
 
-    <header>
-
+    <header class="head-head">
         <div class="toptop-line">
             <p>Gunnars Gleaming Services Power Washing</p>
         </div>
         <div class="head">
-            <a class="logo-logo" href="index.html"><img src="https://freelance-bucket-1.s3.us-east-2.amazonaws.com/gunnar-power-washing+/FullLogo_Transparent_NoBuffer.png" alt="logo" width="auto" height="110px"></a>
+            <a class="logo-logo" href="index.html">
+                <img src="https://freelance-bucket-1.s3.us-east-2.amazonaws.com/gunnar-power-washing+/FullLogo_Transparent_NoBuffer.png" alt="logo" width="auto" height="110px">
+            </a>
 
             <ul class="links one">
                 <li><a href="../index.html">Home</a></li>
@@ -31,39 +32,58 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
+            <div class="head-buttons">
+                <a href="mailto:ggspowerwashing5@gmail.com">
+                    <button class="button-5" type="button">Email Us</button>
+                </a>
+                
+                <a href="tel:+5129927102">
+                    <button class="button-5" type="button">Call Us</button>
+                </a>
+            </div>
+       
+    <div class="off-screen-menu">
+        <ul class="">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
-            
-           <div class="head-buttons">
-            <a href="mailto:ggspowerwashing5@gmail.com">
-                <button class="button-5" type="button" class="btn btn-primary">Email Us</button>
-            </a>
-            
-            <a href="tel:+5129927102">
-                <button class="button-5" type="button" class="btn btn-primary">Call Us</button>
-            </a>
-        </div>
+    <nav>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
 
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle button-5" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                ☰
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Home</a></li>
-                <li><a class="dropdown-item" href=" aboutme.html">About Me</a></li>
-                <li><a class="dropdown-item" href=" services.html">Services</a></li>
-                <li><a class="dropdown-item" href=" gallery.html">Photo Gallery</a></li>
-                <li><a class="dropdown-item" href=" testimonials.html">Testimonials</a></li>
-                <li><a class="dropdown-item" href=" contact.html">Contact</a></li>
+</header>
 
+<script>
+    const hamMenu = document.querySelector(".ham-menu");
 
-            </ul>
-        </div>
-        </div>
+const offScreenMenu = document.querySelector(".off-screen-menu");
 
-        <!-- Dropdown Menu -->
-    
-    </header>
+hamMenu.addEventListener("click", () => {
+hamMenu.classList.toggle("active");
+offScreenMenu.classList.toggle("active");
+});
 
+document.addEventListener("click", (event) => {
+    const isClickInsideMenu = offScreenMenu.contains(event.target);
+    const isClickInsideButton = hamMenu.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickInsideButton) {
+        // Remove active classes to hide the menu
+        hamMenu.classList.remove("active");
+        offScreenMenu.classList.remove("active");
+    }
+});
+</script>
     <div class="contact-head">
         <h1>Contact Us</h1>
     </div>
@@ -93,33 +113,33 @@
 
 
         <div class="form-con">
-
             <div>
                 <h3>Contact Form</h3>
             </div>
-            <form action="/submit" method="post">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSc1WXwIAhWNFk8Rrd2ULwHDBkiwlzgV33A5Mx-bPmI4K_LIlg/formResponse" method="post" target="_blank">
+                <!-- Input Fields with Corresponding Entry Values -->
                 <div class="form-group">
-                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    <input type="text" id="first-name" name="entry.827774699" placeholder="First Name" required>
                 </div>
         
                 <div class="form-group">
-                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    <input type="text" id="last-name" name="entry.1053654186" placeholder="Last Name" required>
                 </div>
         
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" name="entry.428885074" placeholder="Email" required>
                 </div>
         
                 <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    <input type="tel" id="phone" name="entry.1463740226" placeholder="Phone Number" required>
                 </div>
         
                 <div class="form-group">
-                    <input type="text" id="street" name="street" placeholder="Street Address" required>
+                    <input type="text" id="street" name="entry.1739628432" placeholder="Street Address" required>
                 </div>
         
                 <div class="form-group">
-                    <select id="city" name="city" required>
+                    <select id="city" name="entry.908089402" required>
                         <option value="" disabled selected>Select a city</option>
                         <option value="austin">Austin</option>
                         <option value="san-antonio">San Antonio</option>
@@ -130,21 +150,15 @@
                 </div>
         
                 <div class="form-group">
-                    <select id="state" name="state" required>
-                        <option value="texas">Texas</option>
-                    </select>
+                    <input type="text" id="zip" name="entry.1265915499" placeholder="Zip Code" required>
                 </div>
         
                 <div class="form-group">
-                    <input type="text" id="zip" name="zip" placeholder="Zip Code" required>
+                    <textarea id="details" name="entry.1080822707" rows="4" placeholder="Please provide a quick summary of your situation:" required></textarea>
                 </div>
         
                 <div class="form-group">
-                    <textarea id="details" name="details" rows="4" placeholder="Please provide as much information as possible:" required></textarea>
-                </div>
-        
-                <div class="form-group">
-                    <select id="contact-method" name="contact-method" required>
+                    <select id="contact-method" name="entry.1101740515" required>
                         <option value="" disabled selected>How Would You Like To Be Contacted</option>
                         <option value="email">Email</option>
                         <option value="phone">Phone</option>
@@ -153,8 +167,8 @@
                 </div>
         
                 <div class="form-group">
-                    <select id="hear-about-us" name="hear-about-us" required>
-                        <option value="" disabled selected>How Did Your Hear About Us?</option>
+                    <select id="hear-about-us" name="entry.1810561980" required>
+                        <option value="" disabled selected>How Did You Hear About Us?</option>
                         <option value="friend">A Friend</option>
                         <option value="online">Google</option>
                         <option value="social-media">Social Media</option>
@@ -169,7 +183,7 @@
             </form>
         </div>
         
-
+        
      
         <div class="contact-two">
         <p>Phone: <a href="tel:+5129927102">512-992-7102</a></p>
