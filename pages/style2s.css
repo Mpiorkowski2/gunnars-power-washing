@@ -918,12 +918,12 @@ display: none;
 
 
 .form-con {
-        width: 90%; /* Makes the form take 90% of the screen width */
+        width: 100%; /* Makes the form take 90% of the screen width */
         max-width: 400px; /* Keeps it from growing too large on big screens */
         padding: 20px;
-        margin: 20px auto; /* Centers it on all screen sizes */
         background-color: hsl(0, 0%, 100%);
         border-radius: 4px;
+        margin: 30px 0;
         box-shadow: 3px 5px 5px 3px #0000002d;
         color: #002765;
         font-style: italic;
@@ -933,14 +933,6 @@ display: none;
         gap: 10px; /* Adds spacing between inputs */
         justify-content: center;
 }
-@media (max-width: 768px) {
-    .form-con {
-            width: 95%; /* Makes it even more mobile-friendly */
-            margin: 10px auto; /* Reduces outer margin for small devices */
-            padding: 15px; /* Adjusts padding for smaller screens */
-     }
- }
-    
 
 .form-con h3{
     font-size: 30px;
@@ -1016,6 +1008,34 @@ height: 100%;
 
 
 @media(max-width: 600px) {
+
+.form-con label{
+    font-size: 20px;
+}
+.form-con input, textarea{
+    width: 100%;
+    font-size: 17px ;
+    font-weight: 300;
+}
+
+.form-con select{
+    width: 100%;
+    font-weight: 300;
+    font-size: 16px ;
+
+}
+    .form-con {
+        width: 80%; /* Makes it even more mobile-friendly */
+        margin: 10px auto; /* Reduces outer margin for small devices */
+        padding: 15px; /* Adjusts padding for smaller screens */
+ }
+ .form-con form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+ }
+
     .contact-text{
         display: flex;
     flex-direction: column;
