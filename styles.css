@@ -13,8 +13,10 @@ body {
 
 /* off-screen-menu */
 .off-screen-menu {
-    background-color:  rgb(207, 207, 208);
+    background-color:  rgb(232, 232, 232);
     height: 100vh;
+    box-shadow: -10px 0 5px -10px rgba(0, 0, 0, 0.5); /* Left-side shadow */
+
     width: 100%;
     max-width: 330px;
     position: fixed;
@@ -22,9 +24,9 @@ body {
     right: -450px;
     z-index: 9998;
     flex-direction: column;
-    align-items: center;    
+    align-items: flex-start;  
+    text-align: left;  
     justify-content: center;
-    text-align: center;
     font-size: 3rem;
     transition: .5s ease;
     display: none;
@@ -40,6 +42,7 @@ body {
     color: #004bc3;
     font-style: italic;
     font-size: 40px;
+    
     font-weight: 600;
     position: relative; /* Necessary for positioning the pseudo-element */
 }
@@ -64,8 +67,11 @@ body {
     list-style-type: none; /* Removes the bullets */
 }
 .off-screen-menu .touch{
-    margin: 0;
+    margin-left: 40px;
     padding: 0;
+    align-items: center;
+    display: flex;
+
 }
 .off-screen-menu .touch a:hover{
     
