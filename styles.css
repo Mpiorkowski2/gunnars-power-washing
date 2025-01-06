@@ -552,6 +552,11 @@ ul.links.one li a:hover::after {
     background-color: black !important;
     color: white;
 }
+.three-buttons:active,
+.three-buttons:focus{
+    background-color: black !important;
+    color: white;
+}
 @media(max-width: 600px) {
     .three-containers{
         gap: 30px;

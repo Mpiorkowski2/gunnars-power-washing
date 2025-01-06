@@ -732,6 +732,8 @@ background-color: #f2f2f2de;
     width: 900px;
     font-size: 25px;
     font-style: italic;
+    color: #0058e6;  
+
 }
 .four-test{
 display: flex;
@@ -799,9 +801,10 @@ background-color: #f2f2f2de;
 .testimonial-button{
     background-color: white;
     color: black;
+  font-size: 20px;
     margin-bottom: 20px;
     width: 400px;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 .testimonial-button:hover{
     color: white;
@@ -830,7 +833,7 @@ background-color: #f2f2f2de;
         color: black;
         margin-bottom: 20px;
         width: 260px;
-        border-radius: 12px;
+        font-size: 18px;
     }
     .testimonials-top p{
         width: 900px;
@@ -906,23 +909,34 @@ display: none;
     flex-wrap: wrap;
 }
 
-.form-con{
-    width: 400px;
-    padding: 20px;
-    margin: 40px;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 4px;
-    box-shadow: 3px 5px 5px 3px #0000002d;
-    color: #002765;
-    font-style: italic;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    justify-content: center;
+
+.form-con {
+        width: 90%; /* Makes the form take 90% of the screen width */
+        max-width: 400px; /* Keeps it from growing too large on big screens */
+        padding: 20px;
+        margin: 20px auto; /* Centers it on all screen sizes */
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 4px;
+        box-shadow: 3px 5px 5px 3px #0000002d;
+        color: #002765;
+        font-style: italic;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Adds spacing between inputs */
+        justify-content: center;
 }
+@media (max-width: 768px) {
+    .form-con {
+            width: 95%; /* Makes it even more mobile-friendly */
+            margin: 10px auto; /* Reduces outer margin for small devices */
+            padding: 15px; /* Adjusts padding for smaller screens */
+     }
+ }
+    
+
 .form-con h3{
-    font-size: 23px;
+    font-size: 30px;
     font-style: normal;
 }
 .form-group{
@@ -979,7 +993,8 @@ height: 100%;
     font-size: 21px ;
 }
 .contact-two a, .privacy-bod a{
-    color: #002258;
+    color: #004cc7;
+    font-weight: 500;
 }
 .contact-two a:hover, .privacy-bod a:hover{
     color: #0062ff;
