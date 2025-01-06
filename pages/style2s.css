@@ -25,6 +25,8 @@
 
 
 /* off-screen-menu */
+
+/* off-screen-menu */
 .off-screen-menu {
     background-color:  rgb(207, 207, 208);
     height: 100vh;
@@ -44,6 +46,9 @@
 }
 .off-screen-menu.active {
     right: 0;
+}
+.off-screen-menu ul{
+    margin-right: 20px;
 }
 .off-screen-menu a {
     text-decoration: none;
@@ -73,14 +78,41 @@
 .off-screen-menu li {
     list-style-type: none; /* Removes the bullets */
 }
+.off-screen-menu .touch{
+    margin: 0;
+    padding: 0;
+}
+.off-screen-menu .touch a:hover{
+    
+}
+.off{
+    margin-top: -10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.off-screen-menu svg{
+    width: 60px;
+    font-size: 90px;
+}
+.off-screen-menu .touch svg:hover{
+   
+    height: 60px;
+    width: 60px;
+   background-color: transparent;
+}
 
 
 /* nav */
 nav {
     display: none;
-    background-color: #0061fe;
+    background-color: #1e74ff;
     border-radius: 4px;
     margin-left: 20px;
+    margin-right: 10px;
     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
 
 }
@@ -129,9 +161,6 @@ nav {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-
-
 
 *
 
@@ -583,7 +612,7 @@ ul.links.one li a:hover::after {
         font-size: 40px;
     }
     .services-bottom p{
-        font-size: 16px;
+        font-size: 13px !important;
         max-width: 800px;
         color: white;
         font-weight: 500;
@@ -673,7 +702,7 @@ text-align: center;
         
     }
     .gallery-line{
-        font-size: 20px ;
+        font-size: 26px ;
     }
 }
 
@@ -878,7 +907,7 @@ display: none;
 }
 
 .form-con{
-    width: 500px;
+    width: 400px;
     padding: 20px;
     margin: 40px;
     background-color: hsl(0, 0%, 100%);
@@ -886,7 +915,11 @@ display: none;
     box-shadow: 3px 5px 5px 3px #0000002d;
     color: #002765;
     font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 4px;
+    justify-content: center;
 }
 .form-con h3{
     font-size: 23px;
@@ -903,7 +936,7 @@ display: none;
     font-size: 20px;
 }
 .form-con input, textarea{
-    width: 98.5%;
+    width: 100%;
     font-size: 17px ;
     font-weight: 300;
 }
