@@ -474,16 +474,19 @@ ul.links.one li a:hover::after {
     flex-direction: column;
     width: 400px;
     margin: 0;
+    align-items: center;
     text-align: center;
     }
     .services-head{
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
     }
      .service-text h1{
         font-size:32px;
         border-bottom: 2px solid black;
-        width: 100%;
+        width: 300px;
     }
     .service-text p{
         font-size: 17px;
