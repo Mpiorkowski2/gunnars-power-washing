@@ -413,7 +413,7 @@ ul.links.one li a:hover::after {
 .two-about{
     display: flex;
     padding: 40px;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(219, 219, 219);
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -448,7 +448,7 @@ ul.links.one li a:hover::after {
         color: #004bc3;
     }
     .two-about p{
-        font-size: 18px;
+        font-size: 16.5px;
     }
     .two-words{
         display: flex;
