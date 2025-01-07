@@ -661,6 +661,11 @@ text-align: center;    }
    .four-test{
     margin-bottom: 40px;
    }
+   .four-test h1 {
+    font-size: 35px;
+    color: white;
+    padding: 5px
+  }
     
   }
  
