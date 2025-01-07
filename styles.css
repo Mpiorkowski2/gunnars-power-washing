@@ -413,7 +413,7 @@ ul.links.one li a:hover::after {
 .two-about{
     display: flex;
     padding: 40px;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(230, 230, 230);
     justify-content: space-around;
     flex-wrap: wrap;
 }
