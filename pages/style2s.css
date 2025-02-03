@@ -916,12 +916,13 @@ display: none;
     justify-content: space-around;
     background-color: rgba(228, 228, 228, 0.508);
     flex-wrap: wrap;
+
 }
 
 
 .form-con {
         width: 100%; /* Makes the form take 90% of the screen width */
-        max-width: 400px; /* Keeps it from growing too large on big screens */
+        max-width: 500px; /* Keeps it from growing too large on big screens */
         padding: 20px;
         background-color: hsl(0, 0%, 100%);
         border-radius: 4px;
@@ -934,10 +935,11 @@ display: none;
         align-items: center;
         gap: 10px; /* Adds spacing between inputs */
         justify-content: center;
+        margin-bottom: 70px;
 }
 
 .form-con h3{
-    font-size: 30px;
+    font-size: 40px;
     font-style: normal;
 }
 .form-group{
@@ -946,13 +948,16 @@ display: none;
 
 }
 
+.form-con form{
+    width: 460px;
+}
 
 .form-con label{
-    font-size: 20px;
+    font-size: 25px;
 }
 .form-con input, textarea{
     width: 100%;
-    font-size: 17px ;
+    font-size: 20px ;
     font-weight: 300;
 }
 
