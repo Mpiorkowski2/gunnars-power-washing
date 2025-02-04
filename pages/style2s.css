@@ -941,6 +941,7 @@ display: none;
 .form-con h3{
     font-size: 40px;
     font-style: normal;
+    text-align: center;
 }
 .form-group{
    font-size: 20px ;
@@ -964,12 +965,12 @@ display: none;
 .form-con select{
     width: 100%;
     font-weight: 300;
-    font-size: 17px ;
-
+    font-size: 20px ;
 }
 
 .contact-button{
     width: 100%;
+    font-size: 20px;
     margin-top: 10px;
     background-color: #0058e6;
 }
@@ -990,8 +991,8 @@ display: none;
     padding: 20px;
     background-color: hsl(0, 0%, 100%);
     margin: 40px;
-height: 100%;  
-  box-shadow: 3px 5px 5px 3px #0000002d;
+    height: 100%;  
+    box-shadow: 3px 5px 5px 3px #0000002d;
     border-radius: 4px;
 }
 .contact-two p{
